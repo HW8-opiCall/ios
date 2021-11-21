@@ -31,6 +31,7 @@
 		B48E39CE2749F7440094A24F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39CD2749F7440094A24F /* UserModel.swift */; };
 		B48E39D02749F8C80094A24F /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39CF2749F8C80094A24F /* Firestore.swift */; };
 		B48E39D2274A56850094A24F /* alert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B48E39D1274A56850094A24F /* alert.mp3 */; };
+		B48E39D4274A64320094A24F /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B48E39D3274A64320094A24F /* AppIcon.png */; };
 		E242CE6DB6B4CD9A3D094DCB /* Pods_opiCall__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3903A54F1BD3A8C5F08E5A8F /* Pods_opiCall__iOS_.framework */; };
 		EDAAC5A8AB33D5AE068E60D9 /* Pods_opiCall__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF527B5F1082E7052FE12FE /* Pods_opiCall__macOS_.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		B48E39CD2749F7440094A24F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B48E39CF2749F8C80094A24F /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		B48E39D1274A56850094A24F /* alert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alert.mp3; path = ../../../../../../Downloads/alert.mp3; sourceTree = "<group>"; };
+		B48E39D3274A64320094A24F /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = ../../../../../../Downloads/AppIcon.png; sourceTree = "<group>"; };
 		BAF527B5F1082E7052FE12FE /* Pods_opiCall__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opiCall__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		B48E39842749728C0094A24F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B48E39D3274A64320094A24F /* AppIcon.png */,
 				B48E39D1274A56850094A24F /* alert.mp3 */,
 				B48E39B727497CAE0094A24F /* Constants */,
 				B48E39CB2749F7260094A24F /* Domain */,
@@ -304,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48E39D4274A64320094A24F /* AppIcon.png in Resources */,
 				B48E39992749728C0094A24F /* Assets.xcassets in Resources */,
 				B48E39B5274979E90094A24F /* GoogleService-Info.plist in Resources */,
 				B48E39D2274A56850094A24F /* alert.mp3 in Resources */,
@@ -544,6 +548,7 @@
 				DEVELOPMENT_TEAM = 52M4J7JS38;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "opiCall--iOS--Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"This app requires location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -576,6 +581,7 @@
 				DEVELOPMENT_TEAM = 52M4J7JS38;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "opiCall--iOS--Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"This app requires location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
