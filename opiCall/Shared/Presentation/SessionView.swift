@@ -116,30 +116,9 @@ class SessionViewModel: ObservableObject {
     }
 }
 
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    let manager = CLLocationManager()
-
-    @Published var location: CLLocationCoordinate2D?
-
-    override init() {
-        super.init()
-        manager.delegate = self
-    }
-
-    func requestLocation() {
-        manager.requestLocation()
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        location = locations.first?.coordinate
-    }
-}
-
-
 struct SessionView: View {
     @StateObject var sessionVM: SessionViewModel = SessionViewModel()
     @EnvironmentObject var appManager: AppManager
-    @StateObject var locationManager = LocationManager()
 
     var body: some View {
         ZStack {
@@ -244,17 +223,6 @@ struct SessionView: View {
                 }
             } else {
                 VStack(spacing: 0) {
-                    VStack {
-                        if let location = locationManager.location {
-                            Text("Your location: \(location.latitude), \(location.longitude)")
-                        }
-
-                        LocationButton {
-                            locationManager.requestLocation()
-                        }
-                        .frame(height: 44)
-                        .padding()
-                    }
                     if !self.sessionVM.check {
                         Spacer()
                         Button(action: {
