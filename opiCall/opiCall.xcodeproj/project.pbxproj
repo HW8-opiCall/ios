@@ -13,15 +13,54 @@
 		B48E39982749728C0094A24F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39862749728C0094A24F /* ContentView.swift */; };
 		B48E39992749728C0094A24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48E39872749728C0094A24F /* Assets.xcassets */; };
 		B48E399A2749728C0094A24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48E39872749728C0094A24F /* Assets.xcassets */; };
+		B48E39A5274976CF0094A24F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39A4274976CF0094A24F /* MainView.swift */; };
+		B48E39A6274976CF0094A24F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39A4274976CF0094A24F /* MainView.swift */; };
+		B48E39A8274976E20094A24F /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39A7274976E20094A24F /* OnBoardingView.swift */; };
+		B48E39A9274976E20094A24F /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39A7274976E20094A24F /* OnBoardingView.swift */; };
+		B48E39B2274978650094A24F /* AppStorageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39B1274978650094A24F /* AppStorageEntity.swift */; };
+		B48E39B5274979E90094A24F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48E39B4274979E90094A24F /* GoogleService-Info.plist */; };
+		B48E39B6274979E90094A24F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B48E39B4274979E90094A24F /* GoogleService-Info.plist */; };
+		B48E39B927497CB70094A24F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39B827497CB70094A24F /* Constants.swift */; };
+		B48E39BC27497D620094A24F /* CommonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39BB27497D620094A24F /* CommonViews.swift */; };
+		B48E39BE2749836E0094A24F /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39BD2749836E0094A24F /* OnBoardingViewModel.swift */; };
+		B48E39C02749A02A0094A24F /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39BF2749A02A0094A24F /* SessionService.swift */; };
+		B48E39C22749ACBE0094A24F /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39C12749ACBE0094A24F /* SessionView.swift */; };
+		B48E39C62749DF600094A24F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39C52749DF600094A24F /* ProfileView.swift */; };
+		B48E39C82749DF790094A24F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39C72749DF790094A24F /* HomeView.swift */; };
+		B48E39CA2749F70E0094A24F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39C92749F70E0094A24F /* NetworkService.swift */; };
+		B48E39CE2749F7440094A24F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39CD2749F7440094A24F /* UserModel.swift */; };
+		B48E39D02749F8C80094A24F /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E39CF2749F8C80094A24F /* Firestore.swift */; };
+		E242CE6DB6B4CD9A3D094DCB /* Pods_opiCall__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3903A54F1BD3A8C5F08E5A8F /* Pods_opiCall__iOS_.framework */; };
+		EDAAC5A8AB33D5AE068E60D9 /* Pods_opiCall__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF527B5F1082E7052FE12FE /* Pods_opiCall__macOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3903A54F1BD3A8C5F08E5A8F /* Pods_opiCall__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opiCall__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		532ACB7E306C158153BE467A /* Pods-opiCall (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opiCall (macOS).release.xcconfig"; path = "Target Support Files/Pods-opiCall (macOS)/Pods-opiCall (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		6B9FF0F11900DE9AB4805E69 /* Pods-opiCall (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opiCall (iOS).debug.xcconfig"; path = "Target Support Files/Pods-opiCall (iOS)/Pods-opiCall (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		76814FD4D5EDEF71E3C6F29E /* Pods-opiCall (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opiCall (iOS).release.xcconfig"; path = "Target Support Files/Pods-opiCall (iOS)/Pods-opiCall (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		783686BA9D39D11EDD5A805B /* Pods-opiCall (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opiCall (macOS).debug.xcconfig"; path = "Target Support Files/Pods-opiCall (macOS)/Pods-opiCall (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		B48E39852749728C0094A24F /* opiCallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opiCallApp.swift; sourceTree = "<group>"; };
 		B48E39862749728C0094A24F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B48E39872749728C0094A24F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B48E398C2749728C0094A24F /* opiCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opiCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48E39922749728C0094A24F /* opiCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = opiCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48E39942749728C0094A24F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		B48E39A4274976CF0094A24F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B48E39A7274976E20094A24F /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		B48E39B1274978650094A24F /* AppStorageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageEntity.swift; sourceTree = "<group>"; };
+		B48E39B4274979E90094A24F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B48E39B827497CB70094A24F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B48E39BB27497D620094A24F /* CommonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViews.swift; sourceTree = "<group>"; };
+		B48E39BD2749836E0094A24F /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		B48E39BF2749A02A0094A24F /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		B48E39C12749ACBE0094A24F /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		B48E39C52749DF600094A24F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B48E39C72749DF790094A24F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B48E39C92749F70E0094A24F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B48E39CD2749F7440094A24F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B48E39CF2749F8C80094A24F /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
+		BAF527B5F1082E7052FE12FE /* Pods_opiCall__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opiCall__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E242CE6DB6B4CD9A3D094DCB /* Pods_opiCall__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,27 +76,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAAC5A8AB33D5AE068E60D9 /* Pods_opiCall__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10DD84D9AB8927E77E396A13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3903A54F1BD3A8C5F08E5A8F /* Pods_opiCall__iOS_.framework */,
+				BAF527B5F1082E7052FE12FE /* Pods_opiCall__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17CD936C5FC1E82F6CEE78BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B9FF0F11900DE9AB4805E69 /* Pods-opiCall (iOS).debug.xcconfig */,
+				76814FD4D5EDEF71E3C6F29E /* Pods-opiCall (iOS).release.xcconfig */,
+				783686BA9D39D11EDD5A805B /* Pods-opiCall (macOS).debug.xcconfig */,
+				532ACB7E306C158153BE467A /* Pods-opiCall (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B48E397F2749728C0094A24F = {
 			isa = PBXGroup;
 			children = (
 				B48E39842749728C0094A24F /* Shared */,
 				B48E39932749728C0094A24F /* macOS */,
 				B48E398D2749728C0094A24F /* Products */,
+				17CD936C5FC1E82F6CEE78BB /* Pods */,
+				10DD84D9AB8927E77E396A13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		B48E39842749728C0094A24F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B48E39852749728C0094A24F /* opiCallApp.swift */,
-				B48E39862749728C0094A24F /* ContentView.swift */,
+				B48E39B727497CAE0094A24F /* Constants */,
+				B48E39CB2749F7260094A24F /* Domain */,
+				B48E39AB2749782F0094A24F /* Data */,
+				B48E39AA2749780F0094A24F /* Presentation */,
 				B48E39872749728C0094A24F /* Assets.xcassets */,
+				B48E39B4274979E90094A24F /* GoogleService-Info.plist */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -78,6 +144,81 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		B48E39A3274976100094A24F /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B48E39A7274976E20094A24F /* OnBoardingView.swift */,
+				B48E39BD2749836E0094A24F /* OnBoardingViewModel.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		B48E39AA2749780F0094A24F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B48E39BA27497D570094A24F /* Common */,
+				B48E39852749728C0094A24F /* opiCallApp.swift */,
+				B48E39862749728C0094A24F /* ContentView.swift */,
+				B48E39A3274976100094A24F /* OnBoarding */,
+				B48E39A4274976CF0094A24F /* MainView.swift */,
+				B48E39C72749DF790094A24F /* HomeView.swift */,
+				B48E39C12749ACBE0094A24F /* SessionView.swift */,
+				B48E39C52749DF600094A24F /* ProfileView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B48E39AB2749782F0094A24F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B48E39BF2749A02A0094A24F /* SessionService.swift */,
+				B48E39C92749F70E0094A24F /* NetworkService.swift */,
+				B48E39AC274978360094A24F /* Repository */,
+				B48E39AD2749783D0094A24F /* Sources */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B48E39AC274978360094A24F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B48E39CF2749F8C80094A24F /* Firestore.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B48E39AD2749783D0094A24F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B48E39B727497CAE0094A24F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B48E39B827497CB70094A24F /* Constants.swift */,
+				B48E39B1274978650094A24F /* AppStorageEntity.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B48E39BA27497D570094A24F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B48E39BB27497D620094A24F /* CommonViews.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B48E39CB2749F7260094A24F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B48E39CD2749F7440094A24F /* UserModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B48E399D2749728C0094A24F /* Build configuration list for PBXNativeTarget "opiCall (iOS)" */;
 			buildPhases = (
+				881674A294825B802C1A7D01 /* [CP] Check Pods Manifest.lock */,
 				B48E39882749728C0094A24F /* Sources */,
 				B48E39892749728C0094A24F /* Frameworks */,
 				B48E398A2749728C0094A24F /* Resources */,
+				439F0B8253CB0FFC57F4E8A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B48E39A02749728C0094A24F /* Build configuration list for PBXNativeTarget "opiCall (macOS)" */;
 			buildPhases = (
+				8C333B529DC70708F40E8710 /* [CP] Check Pods Manifest.lock */,
 				B48E398E2749728C0094A24F /* Sources */,
 				B48E398F2749728C0094A24F /* Frameworks */,
 				B48E39902749728C0094A24F /* Resources */,
@@ -158,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48E39992749728C0094A24F /* Assets.xcassets in Resources */,
+				B48E39B5274979E90094A24F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,10 +311,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48E399A2749728C0094A24F /* Assets.xcassets in Resources */,
+				B48E39B6274979E90094A24F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		439F0B8253CB0FFC57F4E8A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-opiCall (iOS)/Pods-opiCall (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-opiCall (iOS)/Pods-opiCall (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-opiCall (iOS)/Pods-opiCall (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		881674A294825B802C1A7D01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-opiCall (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C333B529DC70708F40E8710 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-opiCall (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B48E39882749728C0094A24F /* Sources */ = {
@@ -177,7 +387,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48E39972749728C0094A24F /* ContentView.swift in Sources */,
+				B48E39C22749ACBE0094A24F /* SessionView.swift in Sources */,
+				B48E39BC27497D620094A24F /* CommonViews.swift in Sources */,
+				B48E39C02749A02A0094A24F /* SessionService.swift in Sources */,
+				B48E39A8274976E20094A24F /* OnBoardingView.swift in Sources */,
+				B48E39BE2749836E0094A24F /* OnBoardingViewModel.swift in Sources */,
+				B48E39A5274976CF0094A24F /* MainView.swift in Sources */,
+				B48E39B2274978650094A24F /* AppStorageEntity.swift in Sources */,
+				B48E39CE2749F7440094A24F /* UserModel.swift in Sources */,
 				B48E39952749728C0094A24F /* opiCallApp.swift in Sources */,
+				B48E39C82749DF790094A24F /* HomeView.swift in Sources */,
+				B48E39C62749DF600094A24F /* ProfileView.swift in Sources */,
+				B48E39CA2749F70E0094A24F /* NetworkService.swift in Sources */,
+				B48E39B927497CB70094A24F /* Constants.swift in Sources */,
+				B48E39D02749F8C80094A24F /* Firestore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +409,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48E39982749728C0094A24F /* ContentView.swift in Sources */,
+				B48E39A9274976E20094A24F /* OnBoardingView.swift in Sources */,
+				B48E39A6274976CF0094A24F /* MainView.swift in Sources */,
 				B48E39962749728C0094A24F /* opiCallApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,13 +531,16 @@
 		};
 		B48E399E2749728C0094A24F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B9FF0F11900DE9AB4805E69 /* Pods-opiCall (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52M4J7JS38;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"This app requires location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,13 +563,16 @@
 		};
 		B48E399F2749728C0094A24F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76814FD4D5EDEF71E3C6F29E /* Pods-opiCall (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52M4J7JS38;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"This app requires location\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -365,6 +596,7 @@
 		};
 		B48E39A12749728C0094A24F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783686BA9D39D11EDD5A805B /* Pods-opiCall (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -391,6 +623,7 @@
 		};
 		B48E39A22749728C0094A24F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532ACB7E306C158153BE467A /* Pods-opiCall (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
