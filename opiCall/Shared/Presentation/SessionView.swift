@@ -9,15 +9,15 @@ import SwiftUI
 import CoreLocation
 import CoreLocationUI
 
-class SessionViewModel: ObservableObject {
+class TimerManager: ObservableObject {
     @Published var isTimerRunning = false
-    @Published var timeRemaining: Int = 1200
+    @Published var timeRemaining: Int = 10
     @Published var timer = Timer()
     @Published var check = false
     @Published var test = false
     
-    private var userResponseTimer = Timer()
-    @Published var userWaitingTime = 60
+    @Published var userResponseTimer = Timer()
+    @Published var userWaitingTime = 10
     
     var appManager: AppManager?
     
@@ -26,17 +26,18 @@ class SessionViewModel: ObservableObject {
     }
     
     private func initTimer() {
-        self.timeRemaining = 600
+        self.timeRemaining = 5
     }
     
     private func initUserWaitingTimer() {
-        self.userWaitingTime = 60
+        self.userWaitingTime = 10
     }
     
     private func startTimer() {
         self.check = false
         self.isTimerRunning = true
         self.appManager?.barType = .Emergency
+        self.initUserWaitingTimer()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timeRemaining in
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1
@@ -117,7 +118,7 @@ class SessionViewModel: ObservableObject {
 }
 
 struct SessionView: View {
-    @StateObject var sessionVM: SessionViewModel = SessionViewModel()
+    @EnvironmentObject var timerManager: TimerManager
     @EnvironmentObject var appManager: AppManager
 
     var body: some View {
@@ -126,7 +127,7 @@ struct SessionView: View {
                 .opacity(0.9)
                 .edgesIgnoringSafeArea(.all)
             
-            if self.sessionVM.test {
+            if self.timerManager.test {
                 VStack {
                     Spacer()
                     
@@ -161,7 +162,7 @@ struct SessionView: View {
                                 .foregroundColor(.white)
                                 .frame(width: screenWidth * 0.05)
                             
-                            Text("Chocking or coughing")
+                            Text("Choking or coughing")
                                 .foregroundColor(.white)
                         }
                         .padding(.top)
@@ -181,7 +182,7 @@ struct SessionView: View {
                                 .foregroundColor(.white)
                                 .frame(width: screenWidth * 0.05)
                             
-                            Text("Extremly small pupils")
+                            Text("Extremely small pupils")
                                 .foregroundColor(.white)
                         }
                         .padding(.top)
@@ -192,7 +193,7 @@ struct SessionView: View {
                     
                     HStack {
                         Button(action: {
-                            self.sessionVM.endTest()
+                            self.timerManager.endTest()
                         }) {
                             Text("No")
                                 .foregroundColor(.white)
@@ -205,7 +206,8 @@ struct SessionView: View {
                         }
                         Spacer()
                         Button(action: {
-                            
+                            self.timerManager.endTest()
+                            self.appManager.alert = true
                         }) {
                             Text("Yes")
                                 .foregroundColor(.white)
@@ -223,17 +225,17 @@ struct SessionView: View {
                 }
             } else {
                 VStack(spacing: 0) {
-                    if !self.sessionVM.check {
+                    if !self.timerManager.check {
                         Spacer()
                         Button(action: {
-                            self.sessionVM.toggleTimer()
+                            self.timerManager.toggleTimer()
                         }) {
                             HStack {
                                 Image(systemName: "timer")
                                     .foregroundColor(.white)
                                     .font(.title)
                                 
-                                Text(self.sessionVM.getTimeString())
+                                Text(self.timerManager.getTimeString())
                                     .foregroundColor(.white)
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
@@ -253,10 +255,10 @@ struct SessionView: View {
                             .padding()
                     }
                     
-                    if self.sessionVM.check {
+                    if self.timerManager.check {
                         Spacer()
                         
-                        Text(String(format: "%02i", self.sessionVM.userWaitingTime))
+                        Text(String(format: "%02i", self.timerManager.userWaitingTime))
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .fontWeight(.heavy)
@@ -266,10 +268,10 @@ struct SessionView: View {
                         Spacer()
                     }
                     
-                    if self.sessionVM.check {
+                    if self.timerManager.check {
                         HStack {
                             Button(action: {
-                                self.sessionVM.startTest()
+                                self.timerManager.startTest()
                             }) {
                                 Text("No")
                                     .foregroundColor(.white)
@@ -282,7 +284,8 @@ struct SessionView: View {
                             }
                             Spacer()
                             Button(action: {
-                                self.sessionVM.extendTime()
+                                self.timerManager.extendTime()
+                                self.timerManager.userResponseTimer.invalidate()
                             }) {
                                 Text("Yes")
                                     .foregroundColor(.white)
@@ -303,9 +306,6 @@ struct SessionView: View {
             }
         }
         .navigationBarHidden(true)
-        .onAppear{
-            self.sessionVM.setup(appManager)
-        }
     }
 }
 

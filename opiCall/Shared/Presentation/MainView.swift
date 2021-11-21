@@ -26,19 +26,37 @@ class AppManager: ObservableObject {
     @Published var alertTimer = Timer()
 }
 
+var player: AVAudioPlayer?
+
 struct MainView: View {
+    @StateObject var timerManager: TimerManager = TimerManager()
     @State var containedViewType: ContainedViewType = .home
     @StateObject var appManager = AppManager()
     
     func containedView() -> AnyView {
          switch containedViewType {
          case .home: return AnyView(HomeView())
-         case .session: return AnyView(SessionView().environmentObject(appManager))
+         case .session: return AnyView(SessionView().environmentObject(appManager).environmentObject(timerManager))
          case .profile: return AnyView(ProfileView())
          }
     }
     
-    func vibrate() {
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "alert", withExtension: "mp3") else {
+            print("url not found")
+            return
+        }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            player = try AVAudioPlayer(contentsOf: url)
+
+            player!.play()
+        } catch let error as NSError {
+            print("error: \(error.localizedDescription)")
+        }
     }
     
     var body: some View {
@@ -67,9 +85,10 @@ struct MainView: View {
                     .padding()
                 }
                 .onAppear {
-                    appManager.alertTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) {
+                    appManager.alertTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
                         timer in
                         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                        playSound()
                     }
                 }
                 .onTapGesture(count: 3) {
@@ -77,6 +96,7 @@ struct MainView: View {
                 }
                 .onDisappear{
                     appManager.alertTimer.invalidate()
+                    player?.stop()
                 }
             } else {
                 containedView()
@@ -87,6 +107,7 @@ struct MainView: View {
                 case .Emergency:
                     Button(action: {
                         self.appManager.alert = true
+                        timerManager.stopTimer()
                     }) {
                         VStack {
                             Text("EMERGENCY")
@@ -102,6 +123,9 @@ struct MainView: View {
                     EmptyView()
                 }
             }
+        }
+        .onAppear {
+            self.timerManager.setup(appManager)
         }
         .edgesIgnoringSafeArea(.bottom)
     }
