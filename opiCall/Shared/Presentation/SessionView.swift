@@ -11,13 +11,13 @@ import CoreLocationUI
 
 class SessionViewModel: ObservableObject {
     @Published var isTimerRunning = false
-    @Published var timeRemaining: Int = 2
+    @Published var timeRemaining: Int = 1200
     @Published var timer = Timer()
     @Published var check = false
     @Published var test = false
     
     private var userResponseTimer = Timer()
-    @Published var userWaitingTime = 5
+    @Published var userWaitingTime = 60
     
     var appManager: AppManager?
     
@@ -26,11 +26,11 @@ class SessionViewModel: ObservableObject {
     }
     
     private func initTimer() {
-        self.timeRemaining = 1
+        self.timeRemaining = 600
     }
     
     private func initUserWaitingTimer() {
-        self.userWaitingTime = 5
+        self.userWaitingTime = 60
     }
     
     private func startTimer() {
